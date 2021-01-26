@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://lzhttt.gitee.io/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+    <title>导航</title>
+
+
+
+    <style type="text/css">
+        /*css代码*/
+       
+        /*基础样式设置*/
+        
+        body {
+            background: rgb(8, 66, 133)
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        body,
+        ul,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        form,
+        dl,
+        dt,
+        dd {
+            margin: 0px;
+            padding: 0px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none
+        }
+        /*基础样式设置*/
+        
+        .ss-zongkuang {
+            width: 900px;
+            /*总框宽度*/
+            margin: 0 auto;
+            /*设定居中*/
+            padding-top: 15%;
+            /*总框与顶部距离百分比*/
+        }
+        /* 搜索框总框 */
+        
+        .ss-sousuozongkuang {
+            margin-top: 0px;
+            /*搜索总框与上部上下距离*/
+            margin-bottom: 10px;
+            /*搜索总框与快捷栏上下距离*/
+            position: relative;
+            display: flex;
+        }
+        
+        .ss-sousuokuangziti {
+            font-size: 20px;
+            /*搜索框内字体大小*/
+            color: rgb(255, 255, 255);
+            display: flex;
+            width: 775px;
+            /*搜索输入框宽度*/
+            height: 40px;
+            /*搜索输入框下高度*/
+            line-height: 10px;
+            /*搜索输入框上高度*/
+            border: 1px solid rgba(144, 186, 219, 0.96);
+            /*搜索输入框边框厚度和边框颜色*/
+            /*margin: 0 auto/*搜索输入框居中*/
+            background: rgb(8, 66, 133);
+            /*框框颜色*/
+        }
+        /*搜索按钮*/
+        
+        .ss-sousuoanniu {
+            /*按钮参数*/
+            width: 123px;
+            /*按钮宽度*/
+            height: 40px;
+            /*按钮高度*/
+            line-height: 26px;
+            background-repeat: no-repeat;
+            background-position: center;
+            -webkit-background-size: 35px 35px;
+            background-size: 35px 35px;
+            color: rgb(161, 213, 248);
+            /*字体颜色*/
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            font-family: Roboto;
+            border: 1px solid rgba(144, 186, 219, 0.96);
+            /*按钮边框宽度及颜色*/
+            cursor: pointer;
+            background: linear-gradient(90deg, #2471af9d, rgb(8, 66, 133));
+            /*按钮颜色*/
+        }
+        /*  导航内容  */
+        
+        .dh-zongyangshi {
+            overflow: hidden;
+            /*设定框子中内容溢出隐藏*/
+        }
+        /*内容区域*/
+        /*-----------------------------简洁版样式定义- 开始---------------------------------------------------*/
+        
+        .dh-list {
+            width: 33.33%;
+            float: left;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+        
+        .dh-list:nth-of-type(3n) {
+            padding-right: 0;
+        }
+        
+        .dh-list-tit {
+            /*标题格式*/
+            font-size: 30px;
+            line-height: 30px;
+            color: rgba(49, 70, 89, 1);
+            font-weight: bold;
+        }
+        
+        .dh-list-con {
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        
+        .dh-list-con li {
+            box-sizing: border-box;
+            /*以IE盒子模型的width为标准*/
+            padding: 3px 1px;
+            /*设置div的内边距*/
+            width: 100%;
+            /*div等分成几部分*/
+        }
+        
+        .dh-list-link {
+            display: block;
+            background: rgba(65, 115, 172, 0.76);
+            /*背景颜色与透明度*/
+            color: rgba(255, 255, 255, 0.651);
+            /*字体颜色与透明度*/
+            font-size: 25px;
+            /*连接内字体大小*/
+            text-align: center;
+            line-height: 44px;
+            transition: all 0.6s;
+            border-radius: 6px;
+            /*倒角大小*/
+        }
+        
+        .dh-list-link:hover {
+            background: #4ba3f5;
+            /*选中后框框颜色*/
+            font-size: 26px;
+            /*选中后字体大小*/
+            /* font-weight: bold;/*是否加粗*/
+            color: #fff;
+        }
+        /*css代码*/
+
+
+        .full-screen {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            /* align-items: center;
+            /*让子div位于上下来说的中心上*/
+            justify-content: center;
+            /*让子div位于左右来说的中心上*/
+        }
+        .content a {
+            display: block;
+            margin: 0px 2px 2px 2px;
+            /*框框与框框的margin:后面跟有四个距离分别为到父容器的上-右-下-左边的距离；margin: [top][right][bottom][left]*/
+            border-radius: 3px;
+            /*框框倒角大小*/
+            background-color: rgba(0, 0, 0, 0.568);
+            /*选择链接框框颜色与透明度*/
+            text-align: center;
+            /*意思是把文字排到中间*/
+            color: rgb(78, 154, 240);
+            /*选择链接字体颜色*/
+            text-transform: uppercase;
+            /*定义仅有大写字母。*/
+            transition: .2s linear;
+            /*选中渐变时间*/
+            border: 1.2px solid rgba(104, 152, 207, 0.616);
+            /*边框颜色*/
+            display:inline;
+            /*两个盒子横向排列*/
+        }
+        
+        .content a:hover {
+            background: rgb(12, 79, 155);
+            /*框框被选中后的颜色*/
+            color: #e6f3f3;
+            /*选择链接字体颜色*/
+        }
+
+    </style>
+
+</head>
+
+<body>
+   
+       
+
+        <!---->
+
+
+    <div class="content" >
+        <a href="https://lzhttt.top/"  >LZHTTT</a>
+        <a href="./gengduo.html"  >更多链接</a>
+    </div>
+    
+
+    <div class="ss-zongkuang">
+
+        <!-- 百度搜索 start -->
+        <form action="http://www.baidu.com/baidu" target="_blank">
+
+            <div align="center" class="ss-sousuozongkuang" target="_blank">
+
+
+
+                <input name="tn" type="hidden" value="baidu">
+                <input class="ss-sousuokuangziti" type="text" name="word">
+                <input class="ss-sousuoanniu" value="开始搜索" id="search_submit" type="submit">
+
+
+
+            </div>
+
+
+        </form>
+
+      
+        <!-- 导航地址 start -->
+        <div class="dh-zongyangshi">
+            
+
+            <div class="dh-list">
+                
+                <ul class="dh-list-con">
+
+                    <li><a href="http://aaa.fpb.cq.gov.cn:5090/cas/login?service=http%3A%2F%2Faaa.fpb.cq.gov.cn%3A7080%2Fj_spring_cas_security_check" class="dh-list-link" target="_blank"><span>大数据平台</span></a></li>
+                    <li><a href="http://106.38.235.201:7080/cas/login?service=http%3A%2F%2F106.38.235.201%3A7080%2Fportal%2Fj_spring_cas_security_check%3Bjsessionid%3DVqkre03PAO2jkFVXN3OFEK0joPi2OM_Q-qFk7DduDFODXZCUm5jA%211300521394" class="dh-list-link"
+                            target="_blank"><span>扶贫国网</span></a></li>
+                    <li><a href="https://www.zgshfp.com.cn/work/#/login" class="dh-list-link" target="_blank">社会扶贫网</a></li>
+                    
+
+                </ul>
+
+            </div>
+
+
+
+
+
+            <div class="dh-list">
+
+                <ul class="dh-list-con">
+                    <li><a href="http://chongqing.zgshfp.com.cn/admin/backendUi!login.do" class="dh-list-link" target="_blank">重庆馆后台 </a></li>
+                    <li><a href="http://fpb.cq.gov.cn/" class="dh-list-link" target="_blank">重庆扶贫开发办公室 </a></li>
+                    <li><a href="http://aaa.fpb.cq.gov.cn:8100/plbd/login" class="dh-list-link" target="_blank">贫困对象查询</a></li>
+                   
+    
+
+
+
+                </ul>
+
+            </div>
+
+
+
+
+
+            <div class="dh-list">
+
+                <ul class="dh-list-con">
+    
+                    <li><a href="https://www.bilibili.com/" class="dh-list-link" target="_blank">bilibili</a></li>
+                    <li><a href="https://github.com/" class="dh-list-link" target="_blank">GITHUB</a></li>
+                    <li><a href="https://gitee.com/" class="dh-list-link" target="_blank">GITEE</a></li>
+                    
+
+                </ul>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+</body>
+<div style="pointer-events: none; visibility: hidden; position: absolute;"></div>
+<div style="all: initial;">
+    <div></div>
+</div>
+
+</html>
