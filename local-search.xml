@@ -80,11 +80,30 @@
   
   
   <entry>
+    <title>deepin安装无线网卡驱动8821ce</title>
+    <link href="/2018/01/01/deepin%E5%AE%89%E8%A3%85%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A88821ce/"/>
+    <url>/2018/01/01/deepin%E5%AE%89%E8%A3%85%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A88821ce/</url>
+    
+    <content type="html"><![CDATA[<h3 id="1、在终端输入-lspci-，查看自己的网卡信息。"><a href="#1、在终端输入-lspci-，查看自己的网卡信息。" class="headerlink" title="1、在终端输入   lspci  ，查看自己的网卡信息。"></a>1、在终端输入   <code>lspci</code>  ，查看自己的网卡信息。</h3><h3 id="2、在-github-上下载和自己电脑相匹配的驱动jar包。"><a href="#2、在-github-上下载和自己电脑相匹配的驱动jar包。" class="headerlink" title="2、在  github 上下载和自己电脑相匹配的驱动jar包。"></a>2、在  <a href="https://github.com/tomaspinho/rtl8821ce">github</a> 上下载和自己电脑相匹配的驱动jar包。</h3><h3 id="3、解压下载好的包并进入打开在解压好的包中打开终端。"><a href="#3、解压下载好的包并进入打开在解压好的包中打开终端。" class="headerlink" title="3、解压下载好的包并进入打开在解压好的包中打开终端。"></a>3、解压下载好的包并进入打开在解压好的包中打开终端。</h3><h3 id="4、-在终端命令行依次输入命令，必须在上一个命令运行结束后再输入下一个："><a href="#4、-在终端命令行依次输入命令，必须在上一个命令运行结束后再输入下一个：" class="headerlink" title="4、 在终端命令行依次输入命令，必须在上一个命令运行结束后再输入下一个："></a>4、 在终端命令行<strong>依次</strong>输入命令，必须在<strong>上一个命令运行结束后再输入下一个</strong>：</h3><p><code>sudo make</code></p><p><code>sudo ./dkms-install.sh</code>    </p><p><code>sudo modprobe 8821ce</code>     //此行为启动网卡服务，有的会自动启动</p><p><code>sudo apt-get update</code>      更新资源列表</p><p>到此结束</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>deepin</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>云落成雨，升而复回</title>
     <link href="/2018/01/01/%E4%BA%91%E8%90%BD%E6%88%90%E9%9B%A8%EF%BC%8C%E5%8D%87%E8%80%8C%E5%A4%8D%E5%9B%9E/"/>
     <url>/2018/01/01/%E4%BA%91%E8%90%BD%E6%88%90%E9%9B%A8%EF%BC%8C%E5%8D%87%E8%80%8C%E5%A4%8D%E5%9B%9E/</url>
     
-    <content type="html"><![CDATA[<p><strong>回眸下，深巷中，清冷乱眉梭。<br>寂若无人归晴时，相伴悬窗眺东升。<br>雨作天花滴旧梦，往事了如风。<br>别转千回处，楼台清冷。<br>西窗烟酒下，均入陌行中。</strong></p><p>hello world</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>回眸下，深巷中，清冷乱眉梭。<br>寂若无人归晴时，相伴悬窗眺东升。<br>雨作天花滴旧梦，往事了如风。<br>别转千回处，楼台清冷。<br>西窗烟酒下，均入陌行中。</strong></p>]]></content>
     
     
     <categories>
