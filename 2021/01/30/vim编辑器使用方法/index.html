@@ -1,0 +1,550 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="L">
+  <meta name="keywords" content="">
+  <title>vim编辑器使用方法 - LZHTTT</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":130,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>LZHTTT</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/dh.html">
+                <i class="iconfont icon-love"></i>
+                导航
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/beijing.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="vim编辑器使用方法">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-30 08:53" pubdate>
+        2021年1月30日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      34
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">vim编辑器使用方法</h1>
+            
+            <div class="markdown-body">
+              <h1 id="vi-vim编辑器使用方法"><a href="#vi-vim编辑器使用方法" class="headerlink" title="vi/vim编辑器使用方法"></a>vi/vim编辑器使用方法</h1><p><img src="https://pcsdata.baidu.com/thumbnail/27c0480a9j81c55c04e4585ac911b5da?fid=2882848678-16051585-202256800700200&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-ZpF6o2ZiEnwJsG278YryPLl9sWQ=&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2486646853&dp-callid=0&time=1611968400&size=c1600_u1600&quality=100&vuk=-&ft=video" srcset="/img/loading.gif"></p>
+<h2 id="一：vi-vim基本介绍"><a href="#一：vi-vim基本介绍" class="headerlink" title="一：vi   vim基本介绍"></a>一：vi   vim基本介绍</h2><p>  Vim是一个高度可配置的文本编辑器，用于创建和更改任何类型的文本非常高效。与大多数UNIX系统和Apple OS  X一起，它被包含为“vi”。Vim是稳定的，并且不断发展，变得更好。其特点是：持久的多级撤消树；广泛的插件系统；支持数百种编程语言和文件格式；强大的搜索和替换；与许多工具集成。<br> <br>  Vim是Vi  IMproved，是编辑器Vi的一个加强版，一个极其强大并符合IT工程师（程序员、运维）习惯的编辑器。如果你是一名职业的SE，那么一定在寻找一款出色的能够自由定制、满足灵活编辑功能的编辑器。那么答案，就是vim或者Emacs。vim最大特色是完全使用键盘命令进行编辑，脱离了鼠标操作虽然使得入门变得困难，但上手之后键盘的各种巧妙组合操作却能带来极为大幅的效率提升。<br> <br>  在Linux系统中，RHEL和CentOS的配置文件是/etc/vimrc，Debian和Ubuntu的配置文件是/usr/share/vim/vimrc。</p>
+<p><strong>那么vimRC中的RC是什么意思？</strong><br>  一般在运行某个软件、环境或工具之初，要初始执行的一些命令，称为Run Commands，即RC。根据Wikipedia.org的记载，RC缩写的用法源自MIT的相容分时操作系统（Compatible  Time-Sharing System，CTSS）[参考1]，有兴趣的话请自行了解。</p>
+<h2 id="二、vim的三种基本模式"><a href="#二、vim的三种基本模式" class="headerlink" title="二、vim的三种基本模式"></a>二、vim的三种基本模式</h2><p>基本上vi/vim可以分为三种状态，分别是普通模式、插入模式和命令模式，各模式的功能区分如下：<br><strong>1、普通模式</strong><br>控制屏幕光标的移动，字符、字或行的删除，移动复制某区段。<br><strong>2、插入模式</strong><br>只有在插入下，才可以做文字输入、删除，按「ESC」键可回到普通模式。<br>可以按i、I、a、A、o、O、r、R即可。其中i和I表示插入（Insert），r和R表示替换（replace）。<br><strong>3、命令模式</strong><br>将文件保存或退出vim，也可以设置编辑环境，如寻找字符串、列出行号等……<br>可以按“:”、“/”、“?”。其中“:”表示输入vim命令，“/”表示后面输入要向下搜索的字符串，“?”表示后面输入要向上搜索字符串。<br> <br>其实，可以把普通模式理解为常态，进入其它任何一种模式，需要某种特殊方式，而从其它特殊模式回到普通模式，就按「ESC」键即可。</p>
+<h2 id="三、vim最常用的配置"><a href="#三、vim最常用的配置" class="headerlink" title="三、vim最常用的配置"></a>三、vim最常用的配置</h2><p>为了使以下参数永久有效，那你可以把以下参数写进/etc/vimrc配置文件里，当然，有一些参数已经存在配置文件中了。 <br><strong>1、颜色设置</strong></p>
+<blockquote>
+<p>syntax on   开启代码高亮<br>syntax off   关闭代码高亮<br>syntax enable 开启代码高亮</p>
+</blockquote>
+<p><strong>2、搜索设置</strong></p>
+<blockquote>
+<p>set hlsearch   –开启搜索高亮<br>set nohlsearch  –关闭搜索高亮<br>set incsearch    –输入搜索字符串的同时进行搜索<br>set ignorecase  –搜索时忽略大小写</p>
+</blockquote>
+<p><strong>3、用户界面</strong></p>
+<blockquote>
+<p>set ruler       –开启光标位置提示<br>set number     –显示行号<br>set nonu       –不显示行号<br>set cmdheight=1  –命令部分高度为1</p>
+</blockquote>
+<p><strong>4、编辑辅助配置</strong></p>
+<blockquote>
+<p>set autoindent     –自动缩进<br>set noautoindent   –不自动缩进<br>set smartindent     –智能缩进<br>set autoread       –当文件在外部被改变时，vim自动更新载入<br>set showmatch      –显示匹配的括号</p>
+</blockquote>
+<h2 id="四、常用的状态切换按键"><a href="#四、常用的状态切换按键" class="headerlink" title="四、常用的状态切换按键"></a>四、常用的状态切换按键</h2><p><strong>1、普通模式 → 插入模式</strong></p>
+<blockquote>
+<p>i   小写字母i，   在光标位置插入<br>a  小写字母a，  在光标的下一个位置插入<br>I   大写字母I，   在光标所在行的第一个非空格处插入<br>A  大写字母A， 在光标所在行的最后一个字符处插入<br>o  小写字母o，  在光标所在行的下一行处插入新行<br>O  大写字母O， 在光标所在行的上一行处插入新航<br>r   小写字母r，   替换光标所在处的字符一次<br>R  大写字母R， 持续替换光标所在处的字符，直到按下「ESC」键</p>
+</blockquote>
+<p><strong>2、普通模式 → 命令模式</strong></p>
+<blockquote>
+<p>:w   保存文件<br>:w!  强制保存文件（前提是用户有修改文件访问权限的权限）<br>:q   退出缓冲区<br>:q!  强制退出缓冲区而不保存<br>:wq   保存文件并退出缓冲区<br>:wq!  强制保存文件并退出缓冲区（前提是用户有修改文件访问权限的权限）<br>:w [filename]  另存为名为filename文件<br>:r [filename]   将另外一个文件读入到正在编辑的文件<br>:n1,n2 w [filename]  将n1行到n2行的数据另存为名为filename文件<br>:x      保存并退出<br>ZZ    保存并退出<br>ZQ   不保存退出</p>
+</blockquote>
+<p><strong>3、插入模式 → 视图模式</strong><br>按下「ESC」键<br> <br><strong>4、命令模式 → 视图模式</strong><br>按下「ESC」键
+ </p>
+<h2 id="五、常用的光标移动按键"><a href="#五、常用的光标移动按键" class="headerlink" title="五、常用的光标移动按键"></a>五、常用的光标移动按键</h2><p><strong>1、光标字符操作</strong></p>
+<blockquote>
+<p>h  向左箭头键(←) 光标向左移动一个字符<br>l   向右箭头键(→) 光标向右移动一个字符<br>j   向下箭头键(↓) 光标向下移动一个字符<br>k  向上箭头键(↑) 光标向上移动一个字符<br>$  光标移动到行尾（End），注意要按「Shift」键<br>0  光标移动到行首（Home）<br>^  光标移动到行首第一个非空白字符（Home），注意要按「Shift」键</p>
+</blockquote>
+<p><strong>2、光标词操作</strong></p>
+<blockquote>
+<p>w   光标移动到后一词的词首<br>W  光标移动到后一词的词首且忽略标点符号<br>e   光标移动到后一词的词尾<br>E   光标移动到后一词的词尾且忽略标点符号<br>b   光标移动到前一词的词首<br>B   光标移动到前一词的词首且忽略标点符号</p>
+</blockquote>
+<p><strong>3、光标行操作</strong></p>
+<blockquote>
+<p>G     光标移动到文件的最后一行的第一个非空白字符<br>nG/ngg 光标移动到文件的第n行，相当于”:n”<br>gg    光标移动到文件的第1行的第一个非空白字符</p>
+</blockquote>
+<p><strong>4、光标页操作</strong></p>
+<blockquote>
+<p>Ctrl + f   向下翻页（Pagedown）<br>Ctrl + b  向上翻页（Pageup）<br>Ctrl + d  向下翻半页<br>Ctrl + u  向上翻半页<br>「H」  光标移动到目前显示页的第一行<br>「M」  光标移动到目前显示页的中间行<br>「L」   光标移动到目前显示页的最后一行</p>
+</blockquote>
+<p><strong>5、光标自由操作</strong></p>
+<blockquote>
+<p>Ctrl + o  回到光标的上一位置</p>
+</blockquote>
+<h2 id="六、常用编辑操作按键"><a href="#六、常用编辑操作按键" class="headerlink" title="六、常用编辑操作按键"></a>六、常用编辑操作按键</h2><p><strong>1、删除操作（delete）</strong></p>
+<blockquote>
+<p>dd   删除光标所在行<br>ndd    删除从光标所在行开始，向下的n行<br>d1G   删除从光标所在行开始，到第一行的所有行<br>dG   删除从光标所在行开始，到最后一行的所有行<br>d$    删除从光标所在位置，到行尾的所有字符<br>d0    删除从光标所在位置，到行首的所有字符<br>x    每按一次，删除光标所在位置的“后面”一个字符。<br>nx     删除光标所在位置的“后面”n个字符。<br>X      大写的X，每按一次，删除光标所在位置的“前面”一个字符。<br>nX    删除光标所在位置的“前面”n个字符。</p>
+</blockquote>
+<p><strong>2、复制操作（yank）</strong></p>
+<blockquote>
+<p>yy   复制光标所在行<br>nyy    复制从光标所在行开始，向下的n行<br>y1G   复制从光标所在行开始，到第一行的所有行<br>yG     复制从光标所在行开始，到最后一行的所有行<br>y$   复制从光标所在位置，到行尾的所有字符<br>y0   复制从光标所在位置，到行首的所有字符<br>J     将光标所在行与下一行合并成一行<br>yw     复制当前光标所在的字母到该单词的最后一个字母<br>yaw   复制当前光标所在的单词</p>
+</blockquote>
+<p><strong>3、粘贴操作（paste）</strong></p>
+<blockquote>
+<p>p  小写字母p，粘贴剪贴板中的数据，从光标所在行的下一行开始<br>P  大写字母P，粘贴剪贴板中的数据，从光标所在行的上一行开始~~</p>
+</blockquote>
+<p><strong>4、撤销与重做操作（undo）</strong></p>
+<blockquote>
+<p>u   撤销上一个操作</p>
+</blockquote>
+<p><strong>5、重复操作</strong></p>
+<blockquote>
+<p>.   重复上一操作</p>
+</blockquote>
+<p><strong>6、替换操作（replace）</strong></p>
+<blockquote>
+<p>r    替换光标所在处字符<br>R   进入替换模式，直至按ESC退出<br>cc     替换光标所在行<br>cw    替换光标所在的英文单词<br>~    转换大小写<br>:n1,n2s/old/new/g  从n1到n2行将old替换成new，g表示全部替换<br>:1,$s/old/new/g   将整个文件的old替换成new<br>:1,$s/old/new/gc    c表示确认<br>   new (y/n/a/q/l/^E/^Y)? 表示如下：<br>    y：    替换当前内容<br>    n：   不替换<br>    a：    替换所有<br>    q：    退出<br>    l：   替换当前内容，并退出<br>    Ctrl + e：向后查找<br>    Ctrl + y：向前查找</p>
+</blockquote>
+<p><strong>7、排版操作</strong></p>
+<blockquote>
+<p>:le    光标所在行左对齐<br>:ri     光标所在行右对齐<br>:ce   光标所在行居中</p>
+</blockquote>
+<p><strong>8、查看历史</strong></p>
+<blockquote>
+<p>:history  显示最近在vim里面输入的历史</p>
+</blockquote>
+<h2 id="七、常用的搜索快捷键"><a href="#七、常用的搜索快捷键" class="headerlink" title="七、常用的搜索快捷键"></a>七、常用的搜索快捷键</h2><p><strong>1、搜索字符串</strong></p>
+<blockquote>
+<p>/string    向下搜索字符串“string”<br>?string   向上搜索字符串“string”</p>
+</blockquote>
+<p><strong>2、重复上次搜索</strong></p>
+<blockquote>
+<p>n   根据上次搜索条件找到下一个匹配的字符串<br>N  根据上次搜索条件找到上一个匹配的字符串</p>
+</blockquote>
+<h2 id="八、常用多缓冲区操作按键"><a href="#八、常用多缓冲区操作按键" class="headerlink" title="八、常用多缓冲区操作按键"></a>八、常用多缓冲区操作按键</h2><p><strong>1、单一缓冲区打开多个文件</strong></p>
+<blockquote>
+<p>:files  显示目前打开了哪些文件<br>:n    切换到下一个缓冲区内容<br>:N   切换到上一个缓冲区内容<br>:2n    切换到下下个缓冲区内容<br>:bn    下一个缓冲区内容（buffer next）<br>:bp    上一个缓冲区内容（buffer previous）</p>
+</blockquote>
+<p><strong>2、多个缓冲区打开多个文件</strong></p>
+<blockquote>
+<p>:sp [filename]  打开一个新的缓冲区，如果有filename则内容为该文件，否则为当前文件<br>Ctrl+w n  新建一个缓冲区<br>Ctrl+w q  退出光标所在的缓冲区<br>Ctrl+w j   光标移动到下一缓冲区<br>Ctrl+w k  光标移动到上一缓冲区<br>Ctrl+w l  光标移动到右一缓冲区<br>Ctrl+w h  光标移动到左一缓冲区<br>Ctrl+w v  左右切割窗口新建缓冲区<br>Ctrl+w s  上下切割窗口新建缓冲区<br>Ctrl+w o  使光标所在缓冲区最大化，其他缓冲区隐藏</p>
+</blockquote>
+<h2 id="九、关于加密"><a href="#九、关于加密" class="headerlink" title="九、关于加密"></a>九、关于加密</h2><p><strong>1、加密文本文件</strong><br>当你用vim打开或新建一个文件时，如果加上-x参数，即：</p>
+<blockquote>
+<p><strong><code>#</code> vim -x test.txt</strong>  –打开你要加密的文本文件<br>那么vim会提示你：<br><strong>Enter entryption key:</strong><br>当你输入了密码后，vim会提示你重复输入以确认：<br><strong>Enter same key again:</strong><br>当你在设置密码的时候，是以<code>*</code>来显示的，非明文。打开文件之后，:wq保存退出，密码才生效。<br> <br>当下次有人（包括你自己）打开该文件的时候，vim就会提示：<br><strong>Enter encryption key:</strong><br>这时你只要输入你之前所设置的密码就可以了。如果你输入的密码是错误的，vim并不会提示你密码错误，而是显示一堆无意义的垃圾代码。</p>
+</blockquote>
+<p><strong>2、解除加密与重设密码</strong><br>打开你已经加密的文件，然后输入：</p>
+<blockquote>
+<p><strong><code>#</code> vim test.txt</strong>   –打开加密文件之后，输入下面内容<br><strong>:set key=</strong></p>
+</blockquote>
+<p>这样，你的密码就被设置为空了，今后进入就不再需要输入密码了。而如果你向重设密码的话，你可以输入：</p>
+<blockquote>
+<p>:X</p>
+</blockquote>
+<p>注意是个大写字母X。这时vim会提示你，只要反复输入两次新的密码就可以了：</p>
+<blockquote>
+<p>Enter entryption key: <code>*****</code><br>Enter sanme key again: <code>*****</code></p>
+</blockquote>
+<p>如果是清除密码，连续敲两次键盘就可以了<br> <br><strong>注意：</strong><br>加密、解除密码、重设密码之后，一定要保存之后才能生效。<br>如果密码输入错误，vim不会拒绝访问者编辑文件。在这种显示乱码的情况下编辑文件并保存，整个文件就会变得混乱不堪，无法辨识。今后即使使用正确的密码打开文件，也看不到正确的文档了。
+ </p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/vim/">vim</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/01/26/%E5%9C%A8linux%E5%B9%B3%E5%8F%B0%E5%88%9B%E5%BB%BAhexo%E7%8E%AF%E5%A2%83/">
+                        <span class="hidden-mobile">在linux平台创建hexo环境</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="tencent://message/?uin=1941083483&amp;Site=&amp;Menu=yes" target="_blank" rel="nofollow noopener"><span>联系站长QQ</span></a>
+
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
