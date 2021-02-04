@@ -136,5 +136,24 @@
   
   
   
+  <entry>
+    <title>更换deepinlogo</title>
+    <link href="/1970/01/01/%E6%9B%B4%E6%8D%A2deepinlogo/"/>
+    <url>/1970/01/01/%E6%9B%B4%E6%8D%A2deepinlogo/</url>
+    
+    <content type="html"><![CDATA[<p>​    <strong>在Deepin终端中执行下面这三段命令</strong></p><p>​    第一步，执行：</p><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle">sudo mv <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/plymouth/</span>themes<span class="hljs-regexp">/deepin-ssd-logo/</span>logo.png  <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/plymouth/</span>themes<span class="hljs-regexp">/deepin-ssd-logo/</span>logo.png.bak<br></code></pre></td></tr></table></figure><p>（备份原图。）</p><p>​    第二步，执行：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sudo cp 新的图片.png  <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/plymouth/</span>themes<span class="hljs-regexp">/deepin-ssd-logo/</span>logo.png<br></code></pre></td></tr></table></figure><p>（新的图片.png请替换为你想要的动画logo，可以自行选择。）</p><p>​    第三步，执行：</p><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs q">sudo <span class="hljs-keyword">update</span>-initramfs -u<br></code></pre></td></tr></table></figure><p>（系统更新启动。）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>deepin</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
   
 </search>
