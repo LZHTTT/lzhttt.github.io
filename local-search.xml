@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>excel身份证计算年龄</title>
+    <link href="/2021/02/08/excel%E8%BA%AB%E4%BB%BD%E8%AF%81%E8%AE%A1%E7%AE%97%E5%B9%B4%E9%BE%84/"/>
+    <url>/2021/02/08/excel%E8%BA%AB%E4%BB%BD%E8%AF%81%E8%AE%A1%E7%AE%97%E5%B9%B4%E9%BE%84/</url>
+    
+    <content type="html"><![CDATA[<p>excel中，已知身份证号码计算年龄</p><p>周岁计算：<code>=DATEDIF（TEXT（MID（A1,7,8），“#-0-00”），TODAY（），“Y”）</code></p><p>虚岁计算：<code>=YEAR(TODAY())-MID(A1,7,4)</code></p><p>”A1”就是身份证号码所在的单元格，可进行替换。</p><p>MID为截取文本</p><p>TODAY为获目前系统时间</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>excel</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux系统安装Ventoy</title>
     <link href="/2021/02/02/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Ventoy/"/>
     <url>/2021/02/02/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Ventoy/</url>
