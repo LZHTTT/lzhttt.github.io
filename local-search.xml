@@ -13,7 +13,7 @@
     
     <categories>
       
-      <category>excel</category>
+      <category>windows/linux - excel</category>
       
     </categories>
     
@@ -32,7 +32,7 @@
     
     <categories>
       
-      <category>Ventoy</category>
+      <category>linux - Ventoy</category>
       
     </categories>
     
@@ -51,26 +51,7 @@
     
     <categories>
       
-      <category>deepin</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>在linux平台创建hexo环境</title>
-    <link href="/2021/01/30/%E5%9C%A8linux%E5%B9%B3%E5%8F%B0%E5%88%9B%E5%BB%BAhexo%E7%8E%AF%E5%A2%83/"/>
-    <url>/2021/01/30/%E5%9C%A8linux%E5%B9%B3%E5%8F%B0%E5%88%9B%E5%BB%BAhexo%E7%8E%AF%E5%A2%83/</url>
-    
-    <content type="html"><![CDATA[<p>在linux平台创建hexo环境</p><p>1.安装git</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-builtin-name">get</span> install git<br></code></pre></td></tr></table></figure><p>2.安装nodejs:生成静态页面</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-builtin-name">get</span> install nodejs<br></code></pre></td></tr></table></figure><p>用nodejs -v 检查版本看是否安装上</p><p>3.安装npm：一会用来安装hexo</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-builtin-name">get</span> insall npm<br></code></pre></td></tr></table></figure><p>4.正式安装hexo</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo npm <span class="hljs-keyword">install</span> -g hexo<br></code></pre></td></tr></table></figure><p>5.在任意位置创建一个文件夹作为博客目录</p><p>6.在创建的博客目录打开终端或打开终端进入博客目录</p><p>7.使用git设置需要绑定的账户并生成密匙，绑定云端github或者gitee之类。</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs verilog">git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.name</span> “双引号这里的内容更换为github账户名”<br>gut <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.email</span> <span class="hljs-string">&quot;双引号这里的内容更换为github邮箱&quot;</span><br>ssh-keygen -t rsa -C user<span class="hljs-variable">.email</span><br><br></code></pre></td></tr></table></figure><p>密匙生成过程中会出现密匙所保存的文件夹，默认.ssh，不更改就直接回车。</p><p>8.进入github账户中添加生成的密匙.pub那个文件的内容就是密匙。</p><p>最后就是自己挑选博客主题进行更改和文章书写和博客上传了。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>hexo</category>
+      <category>linux - deepin</category>
       
     </categories>
     
@@ -89,7 +70,28 @@
     
     <categories>
       
-      <category>vim</category>
+      <category>linux - vim</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在linux平台创建hexo环境</title>
+    <link href="/2021/01/30/%E5%9C%A8linux%E5%B9%B3%E5%8F%B0%E5%88%9B%E5%BB%BAhexo%E7%8E%AF%E5%A2%83/"/>
+    <url>/2021/01/30/%E5%9C%A8linux%E5%B9%B3%E5%8F%B0%E5%88%9B%E5%BB%BAhexo%E7%8E%AF%E5%A2%83/</url>
+    
+    <content type="html"><![CDATA[<p>在deepin平台创建hexo环境</p><p>1.安装git</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-builtin-name">get</span> install git<br></code></pre></td></tr></table></figure><p>2.安装nodejs:生成静态页面</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-builtin-name">get</span> install nodejs<br></code></pre></td></tr></table></figure><p>用nodejs -v 检查版本看是否安装上</p><p>3.安装npm：一会用来安装hexo</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-builtin-name">get</span> insall npm<br></code></pre></td></tr></table></figure><p>4.正式安装hexo</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo npm <span class="hljs-keyword">install</span> -g hexo<br></code></pre></td></tr></table></figure><p>5.在任意位置创建一个文件夹作为博客目录</p><p>6.在创建的博客目录打开终端或打开终端进入博客目录</p><p>7.使用git设置需要绑定的账户并生成密匙，绑定云端github或者gitee之类。</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs verilog">git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.name</span> “双引号这里的内容更换为github账户名”<br>gut <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.email</span> <span class="hljs-string">&quot;双引号这里的内容更换为github邮箱&quot;</span><br>ssh-keygen -t rsa -C user<span class="hljs-variable">.email</span><br><br></code></pre></td></tr></table></figure><p>密匙生成过程中会出现密匙所保存的文件夹，默认.ssh，不更改就直接回车。</p><p>8.进入github账户中添加生成的密匙.pub那个文件的内容就是密匙。</p><p>最后就是自己挑选博客主题进行更改和文章书写和博客上传了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux</category>
+      
+      <category>deepin - hexo</category>
       
     </categories>
     
@@ -107,6 +109,8 @@
     
     
     <categories>
+      
+      <category>linux</category>
       
       <category>kali</category>
       
@@ -127,6 +131,10 @@
     
     <categories>
       
+      <category>windows</category>
+      
+      <category>office - excel</category>
+      
       <category>vba</category>
       
     </categories>
@@ -146,7 +154,7 @@
     
     <categories>
       
-      <category>无病呻吟</category>
+      <category>正经人不写日记</category>
       
     </categories>
     
@@ -165,7 +173,7 @@
     
     <categories>
       
-      <category>deepin</category>
+      <category>linux - deepin</category>
       
     </categories>
     
