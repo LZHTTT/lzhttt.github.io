@@ -186,7 +186,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      71 字
+      43 字
     </span>
   
 
@@ -230,11 +230,12 @@
             
             <div class="markdown-body">
               <p>excel中，已知身份证号码计算年龄</p>
-<p>周岁计算：<code>=DATEDIF（TEXT（MID（A1,7,8），“#-0-00”），TODAY（），“Y”）</code></p>
-<p>虚岁计算：<code>=YEAR(TODAY())-MID(A1,7,4)</code></p>
-<p>”A1”就是身份证号码所在的单元格，可进行替换。</p>
-<p>MID为截取文本</p>
-<p>TODAY为获目前系统时间</p>
+<p>周岁计算：</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">=<span class="hljs-built_in">DATEDIF</span>(<span class="hljs-built_in">TEXT</span>(<span class="hljs-built_in">MID</span>(<span class="hljs-symbol">A1</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>)，<span class="hljs-string">&quot;#-00-00&quot;</span>)，<span class="hljs-built_in">TODAY</span>()，<span class="hljs-string">&quot;Y&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p>虚岁计算：</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">=<span class="hljs-built_in">YEAR</span>(<span class="hljs-built_in">TODAY</span>())-<span class="hljs-built_in">MID</span>(<span class="hljs-symbol">A1</span>,<span class="hljs-number">7</span>,<span class="hljs-number">4</span>)<br></code></pre></td></tr></table></figure>
+
+
 
             </div>
             <hr>
@@ -258,12 +259,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2021/02/09/%E9%86%92%E4%B8%8D%E6%9D%A5%E7%9A%84%E6%A2%A6/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">醒不来的梦</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/02/02/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Ventoy/">
-                        <span class="hidden-mobile">Linux系统安装Ventoy</span>
+                      <a href="/2021/02/04/%E6%9B%B4%E6%8D%A2deepinlogo/">
+                        <span class="hidden-mobile">更换deepinlogo</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
